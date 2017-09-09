@@ -17,7 +17,13 @@
 		<div class="site-info">
 			<div class="container">
 				<div class="row">
-					<div class="gemm-footer-icons col-md-6 text-center">
+					<div class="gemm-footer-icons col-md-4 text-right">
+						<p class="gemm-footer-icons-contact">
+							Contact us today!<br />
+							Hello@zencottage.com<br />
+							801.000.000
+						</p>
+
 						<?php
 
 						$query = new WP_Query( array( 'post_type' => 'gemm_footer_social' ) );
@@ -30,8 +36,16 @@
 
 						<?php endwhile; endif; wp_reset_postdata; ?>
 					</div>
-					<div class="col-md-6 gemm-copyright text-center">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="gemm-footer-logo" src="<?php header_image(); ?>"/></a></div>
+					<div class="gemm-footer-logo col-md-4 text-center">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="http://localhost/cottagezen/wp-content/uploads/2017/09/CottageZenCleaning_MainLogo.png" /></a>
+					</div>
+					<div class="gemm-copyright col-md-4 text-left">
+						<p>
+							Find us at:<br />
+							123 Main Street<br />
+							Salt Lake City, UTAH
+						</p>
+						<a class="gemm-copyright-quote" href="<?php echo esc_url( home_url( '/quote' ) ); ?>">Get a quote</a>
 					</div>
 				</div> <!-- row -->
 			</div> <!-- container -->

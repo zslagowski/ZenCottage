@@ -15,7 +15,7 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
-<link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i" rel="stylesheet">
 <script src="https://use.fontawesome.com/4c52521bb5.js"></script>
 
 <?php wp_head(); ?>
@@ -45,7 +45,7 @@
 		<div class="row">
       <div class="col-md-12">
 
-					<div class="col-sm-2 text-center"><a href="/"><img class="gemm-header-logo" src="<?php header_image(); ?>"/></a></div>
+					<div class="col-sm-2 text-center"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="gemm-header-logo" src="<?php header_image(); ?>"/></a></div>
 
           <div class="col-sm-10 text-center"><nav class="navbar text-center" role="navigation">
                   <!-- Brand and toggle get grouped for better mobile display -->

@@ -1,5 +1,5 @@
-/*
-Theme Name: GEMM_Portfolio
+Montserrat/*
+Theme Name: Cottage Zen Theme
 Theme URI: http://underscores.me/
 Author: Zach Slagowski
 Author URI: http://www.greeneyedmonstermedia.com/
@@ -47,7 +47,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Normalize
 --------------------------------------------------------------*/
 html {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
 }
@@ -265,8 +265,8 @@ button,
 input,
 select,
 textarea {
-	color: #404040;
-	font-family: 'Lato', sans-serif;
+	color: #2393B3;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -513,7 +513,25 @@ textarea {
 	text-transform: uppercase;
 	letter-spacing: .1em;
 	font-size: 2em;
-	font-weight: 700;
+	font-weight: 400;
+}
+
+.nav>li>a {
+	transition: .2s;
+}
+
+#menu-item-19 {
+	background-color: #BED63C;
+	border-radius: 5px;
+	transition: .2s;
+}
+
+#menu-item-19 a {
+	color: #fff;
+}
+
+#menu-item-19:hover {
+	background-color: #AEDFE6;
 }
 
 .nav>li>a:focus, .nav>li>a:hover {
@@ -542,6 +560,28 @@ button:hover, button:active, button:focus {
 	box-shadow: none;
 }
 
+.navbar-nav>li>.dropdown-menu {
+	border-radius: 15px;
+}
+
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+	background-color: transparent;
+}
+
+.dropdown-menu>li>a {
+	font-size: .7em;
+	color: #2393B3;
+	transition: .2s;
+}
+
+.dropdown-menu>li>a:hover {
+	color: #BED63C;
+}
+
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+	background-color: transparent;
+}
+
 @media (max-width: 1200px) {
 	.navbar-nav {
 		top: 0px;
@@ -558,17 +598,17 @@ button:hover, button:active, button:focus {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: #000;
+	color: #2393B3;
 }
 
 a:visited {
-	color: #000;
+	color: #2393B3;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: #000;
+	color: #BED63C;
 }
 
 a:focus {
@@ -953,11 +993,10 @@ object {
 	background: rgba(255,255,255,.5);
 	position: relative;
 	z-index: 2;
-	background-color: #257E52;
 }
 
 .gemm-header-logo {
-	max-width: 200px;
+	max-width: 400px;
 }
 
 div#bs-example-navbar-collapse-1 {
@@ -1153,20 +1192,44 @@ h3#reply-title {
 --------------------------------------------------------------*/
 
 .site-footer {
-    background-color: #257E52;
+    background-color: #F8F8F8;
+		padding-top: 2em;
+		padding-bottom: 2em;
+}
+
+.gemm-footer-icons {
+	padding-right: 2em;
+}
+
+.gemm-footer-icons-contact {
+	font-size: 1.5em;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	margin-top:2em;
 }
 
 .gemm-footer-icons .fa {
     font-size: 2em;
-    background-color: #000;
+    background-color: #BED63C;
     border-radius: 50%;
     color: #fff;
     padding: .3em;
     margin: .5em .1em;
+		transition: .2s;
+}
+
+.gemm-footer-icons .fa:hover {
+	background-color: #2393B3;
 }
 
 .gemm-footer-icons .fa-facebook {
     padding: .3em .5em;
+}
+
+.gemm-footer-icons .fa-google-plus {
+    padding: .4em .3em;
+		font-size:1.8em;
+
 }
 
 .gemm-footer-icons .fa-instagram {
@@ -1182,18 +1245,36 @@ h3#reply-title {
 }
 
 .gemm-footer-logo {
-    width: 45px;
+    width: 33%;
 }
 
 .gemm-copyright {
-    color: #000;
     text-transform: uppercase;
     letter-spacing: .1em;
     font-size: 1.5em;
+		padding-left: 2em;
 }
 
-.gemm-footer-logo {
-	width: 110px;
+.gemm-copyright p {
+    margin-top: 2em;
+}
+
+.gemm-copyright-quote {
+	background-color: #BED63C;
+	border-radius: 15px;
+	padding: 10px 15px;
+	position: relative;
+	top: 10px;
+	transition: .2s;
+}
+
+.gemm-copyright-quote:hover {
+	background-color: #AEDFE6;
+	text-decoration: none;
+}
+
+a.gemm-copyright-quote {
+	color: #fff;
 }
 
 .entry-footer {
