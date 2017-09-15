@@ -1199,12 +1199,257 @@ a.cz-check-services {
 	}
 }
 
+/*--------------------------------------------------------------
+# About Page
+--------------------------------------------------------------*/
+
+.cz-about-title {
+	font-size: 8em;
+	position: relative;
+	bottom: 400px;
+	text-transform: uppercase;
+	letter-spacing: .2em;
+	font-weight: 500;
+	margin-bottom: -1em;
+	color: #fff;
+}
+
+.cz-about-content-title {
+	letter-spacing: .2em;
+}
+
+.cz-about-content-title h2 {
+	font-size: 4em;
+}
+
+.cz-about-content-title img {
+	width: 350px;
+}
+
+.cz-about-content-title hr {
+	border: 0;
+	height: 3px;
+	background: #AEDFE6;
+	width: 70%;
+	margin: 3em auto 4em auto;
+}
+
+.cz-about-content {
+	width: 70%;
+	margin: 3em auto;
+}
+
+.cz-about-content p {
+	font-size: 2em;
+	margin-bottom: 4em;
+}
+
+.cz-about-featured-2 img {
+	width: 100%;
+	margin-bottom: 4em;
+}
+
+.cz-about-learn-more-button {
+	margin-bottom: 8em;
+}
+
+.cz-about-learn-more {
+	font-size: 2.5em;
+}
+
+@media (max-width: 768px) {
+	.cz-about-title {
+		font-size: 5em;
+	}
+}
+
+/*--------------------------------------------------------------
+# Services Page
+--------------------------------------------------------------*/
+
+.cz-services-bg {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	height: 650px;
+}
+
+.cz-services-title {
+	font-size: 8em;
+	position: relative;
+	bottom: 350px;
+	text-transform: uppercase;
+	letter-spacing: .2em;
+	font-weight: 500;
+	margin-bottom: -1em;
+}
+
+.cz-services-info {
+	margin: 5em 0 8em 0;
+}
+
+.cz-services-section-row {
+	width: 70%;
+	margin: 3em auto;
+}
+
+.cz-services-section-image img {
+	min-width: 130px;
+	max-width: 130px;
+	padding-top: 3em;
+}
+
+.cz-services-section-title {
+    color: #BED63C;
+    font-size: 2.5em;
+    letter-spacing: .2em;
+    margin-bottom: .5em;
+}
+
+.cz-services-section-text {
+    font-size: 1.5em;
+}
+
+@media (max-width: 768px) {
+	.cz-services-title {
+		font-size: 5em;
+	}
+
+	.cz-services-section-image img {
+		padding: 3em 0;
+	}
+}
+
+/*--------------------------------------------------------------
+# Contact Page
+--------------------------------------------------------------*/
+
+.cz-contact-content {
+	margin: 2em auto 4em auto;
+}
+
+.cz-contact-content h2 {
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+.cz-contact-content h3 {
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+
+.cz-contact-content .cz-contact-or {
+	font-size: 3em;
+	color: #AEDFE6;
+	font-style: italic;
+	margin: 2em auto;
+}
+
+.cz-contact-content hr {
+	border: 0;
+	height: 3px;
+	background: #AEDFE6;
+	width: 50%;
+	margin: 4em auto 4em auto;
+}
+
+.cz-contact-learn-more {
+	font-size: 2em;
+}
+
+/*--------------------------------------------------------------
+# Blog Home Page
+--------------------------------------------------------------*/
+
+.cz-blog-page-title {
+	font-size: 8em;
+	position: relative;
+	bottom: 400px;
+	text-transform: uppercase;
+	letter-spacing: .2em;
+	font-weight: 500;
+	margin-bottom: -1em;
+}
+
+.cz-home-posts-row {
+	margin: 2em auto 4em auto;
+}
+
+.cz-blog-page-post-image img {
+	border-radius: 15px;
+}
+
+.cz-blog-page-post-image {
+	margin-bottom: 2em;
+}
+
+.cz-blog-page-post-title {
+	margin-bottom: 1em;
+}
+
+.cz-blog-page-post-title a {
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: #BED63c;
+		transition: .2s;
+}
+
+.cz-blog-page-post-title a:hover {
+	color: #AEDFE6;
+	text-decoration: none;
+}
+
+.cz-blog-page-post-meta {
+	color: #AEDFE6;
+	margin-bottom: 1em;
+	font-style: italic;
+	font-size: 1.5em;
+}
+
+.cz-blog-page-post-excerpt {
+	font-size: 1.5em;
+}
+
+.cz-blog-page-post-read-more {
+	border-radius: 5px;
+	font-size: 1.5em;
+}
+
+.cz-pagination {
+	margin-bottom: 2em;
+}
+
+span.page-numbers.current {
+	font-size: 1.5em;
+	transition: .2s;
+	color: #BED63C;
+}
+
+a.page-numbers {
+	font-size: 1.5em;
+	transition: .2s;
+	padding-left: 1em;
+}
+
+a.page-numbers:hover {
+	text-decoration: none;
+}
 
 /*--------------------------------------------------------------
 # single.php
 --------------------------------------------------------------*/
 .gemm-post-featured-img {
 	padding-bottom: 2em;
+	width: 60%;
+	margin: 2em auto;
+}
+
+.gemm-post-featured-img img {
+	border-radius: 15px;
 }
 
 .entry-title {
@@ -1234,6 +1479,10 @@ h3#reply-title {
 
 #email-notes {
 	font-size: 1.5em;
+}
+
+.cz-entry-header {
+	
 }
 
 /*--------------------------------------------------------------
@@ -1326,6 +1575,12 @@ input#nf-field-13 {
     text-transform: uppercase;
     letter-spacing: .2em;
     font-size: 1.7em !important;
+		transition: .2s;
+}
+
+input#nf-field-13:hover {
+    background: #AEDFE6 !important;
+		border: 1px solid #AEDFE6 !important;
 }
 
 @media (max-width: 991px) {

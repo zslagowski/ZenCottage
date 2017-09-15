@@ -1,26 +1,34 @@
 <?php get_header(); ?>
 
-<section class="gemm-home-container">
-  <div class="container">
+<section class="cz-blog-home-container">
 
-    <h1 class="text-center gemm-blog-page-header">Recent Posts</h1>
+      <div class="cz-services-bg" style="background-image: url('<?php echo get_the_post_thumbnail_url(11); ?>')"></div>
+      <div class="container cz-blog-page-title text-center">
+        <?php single_post_title(); ?>
+      </div> <!--.container -->
 
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-      <div class="gemm-home-posts row">
-          <div class="col-md-5"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></div>
-          <div class="col-md-7">
-            <div class="gemm-front-posts-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
-            <div class="gemm-front-posts-meta"><?php echo get_the_date(); ?> | <?php the_category( ' | '); ?></div>
-            <div class="gemm-front-posts-excerpt"><?php the_excerpt(); ?></div>
-          </div>
+      <div class="container">
+        <div class="cz-home-posts-row row">
+            <div class="col-md-4 cz-blog-page-post-image"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></div>
+            <div class="col-md-8">
+              <div class="cz-blog-page-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
+              <div class="cz-blog-page-post-meta"><p><?php echo get_the_date(); ?></p></div>
+              <div class="cz-blog-page-post-excerpt"><p><?php the_excerpt(); ?></p></div>
+              <div class="cz-blog-page-post-read-more text-right"><a class="cz-learn-more" href="<?php the_permalink(); ?>">Read More</a></div>
+            </div>
+        </div>
       </div>
 
     <?php endwhile; else : ?>
     	<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
     <?php endif; ?>
 
-  </div> <!-- container -->
+    <div class="container cz-pagination text-right">
+      <?php the_posts_pagination(); ?>
+    </div>
+
 </section>
 
 <?php get_footer(); ?>
