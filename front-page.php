@@ -4,42 +4,49 @@
     <?php $query = new WP_Query( array( 'pagename' => 'home' ) ); ?>
 
     <?php if ( $query->have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
-            <div class="gemm-homepage-welcome-msg-bg" style="background-image: url('<?php the_post_thumbnail_url(); ?>')">
-              <div class="container gemm-homepage-welcome-msg">
-                <?php the_content(); ?>
-              </div> <!--.container -->
-            </div> <!--.rb-homepage-welcome-msg -->
+          <div class="cz-header-logo-bg">
+            <div class="cz-header-logo text-center">
+              <img src="http://localhost/cottagezen/wp-content/uploads/2017/09/CottageZenCleaning_MainLogo.png" />
+            </div>
+          </div>
+          <div class="cz-header-logo-transparent"></div>
+          <div class="gemm-homepage-welcome-msg-bg" style="background-image: url('<?php the_post_thumbnail_url(); ?>')"></div> <!--.rb-homepage-welcome-msg -->
+          <div class="container cz-home-content">
+            <?php the_content(); ?>
+          </div> <!--.container -->
     <?php endwhile; else : ?>
       <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
     <?php endif; wp_reset_postdata(); ?>
 </section>
-<section id="gemm-front-posts" class="">
-    <div class="container">
+<section class="cz-home-see-cz text-center">
+  <?php kdmfi_the_featured_image( 'featured-image-2', 'full' ); ?>
+  <a class="cz-check-services cz-learn-more" href="<?php echo esc_url( home_url( '/services' ) ); ?>">Check Out Our Services</a>
+</section>
+<section class="cz-testimonials-section">
+  <?php $query = new WP_Query( array(
+    'post_type' => 'cz_testimonials',
+    'posts_per_page' => '3'
+  )); ?>
 
-        <h2 class="text-center">Recent Posts</h2>
+  <div class="container">
+    <div class="cz-testimonials">
 
-        <?php $query = new WP_Query( array( 'posts_per_page' => 3 ) ); ?>
+      <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 
-        <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+        <div class="cz-testimonial-text text-center">
+          <p>
+            "<?php the_field('testimonial_text'); ?>"
+          </p>
+        </div>
+        <div class="cz-testimonial-author text-center">
+          <p>
+            - <?php the_field('testimonial_author'); ?>
+          </p>
+        </div>
 
-
-                <div class="gemm-front-posts row">
-                    <div class="col-md-5"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></div>
-                    <div class="col-md-7">
-                      <div class="gemm-front-posts-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
-                      <div class="gemm-front-posts-meta"><?php echo get_the_date(); ?> | <?php the_category( ' | '); ?></div>
-                      <div class="gemm-front-posts-excerpt"><?php the_excerpt(); ?></div>
-                    </div>
-                </div>
-
-
-        <?php endwhile; else : ?>
-            <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-        <?php endif; ?>
-
-        <div class="gemm-front-posts-read-more text-right"><a href="/gemmportfolio/blog">More Posts</a></div>
-    </div> <!--container-->
+      <?php endwhile; endif; wp_reset_postdata(); ?>
+    </div>
+  </div>
 </section>
 
 

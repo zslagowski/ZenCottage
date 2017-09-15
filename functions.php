@@ -149,4 +149,22 @@ require get_template_directory() . '/inc/jetpack.php';
 
 require_once('wp_bootstrap_navwalker.php');
 
+//Multiple Post Thumbnails Code
+add_filter( 'kdmfi_featured_images', function( $featured_images ) {
+    $args = array(
+        'id' => 'featured-image-2',
+        'desc' => 'Your description here.',
+        'label_name' => 'Featured Image 2',
+        'label_set' => 'Set featured image 2',
+        'label_remove' => 'Remove featured image 2',
+        'label_use' => 'Set featured image 2',
+        'post_type' => array( 'page' ),
+    );
+
+    $featured_images[] = $args;
+
+    return $featured_images;
+});
+
+//Doesn't show admin bar when logged into home screen
 add_filter('show_admin_bar', '__return_false');

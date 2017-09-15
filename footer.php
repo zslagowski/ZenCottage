@@ -17,29 +17,31 @@
 		<div class="site-info">
 			<div class="container">
 				<div class="row">
-					<div class="gemm-footer-icons col-md-4 text-right">
+					<div class="gemm-footer-icons col-md-4 text-center">
 						<p class="gemm-footer-icons-contact">
 							Contact us today!<br />
 							Hello@zencottage.com<br />
 							801.000.000
 						</p>
 
-						<?php
+						<div class="gemm-footer-sm-icons">
+							<?php
 
-						$query = new WP_Query( array( 'post_type' => 'gemm_footer_social' ) );
+							$query = new WP_Query( array( 'post_type' => 'gemm_footer_social' ) );
 
-						if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post();
+							if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post();
 
-						?>
+							?>
 
-						<a href="<?php the_field('gemm-sm-footer-link'); ?>" target="__blank"><i class="fa <?php the_field('gemm-footer-icon-class'); ?>" aria-hidden="true"></i></a>
+							<a href="<?php the_field('gemm-sm-footer-link'); ?>" target="__blank"><i class="fa <?php the_field('gemm-footer-icon-class'); ?>" aria-hidden="true"></i></a>
 
-						<?php endwhile; endif; wp_reset_postdata; ?>
+							<?php endwhile; endif; wp_reset_postdata; ?>
+						</div>
 					</div>
 					<div class="gemm-footer-logo col-md-4 text-center">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="http://localhost/cottagezen/wp-content/uploads/2017/09/CottageZenCleaning_MainLogo.png" /></a>
 					</div>
-					<div class="gemm-copyright col-md-4 text-left">
+					<div class="gemm-copyright col-md-4 text-center">
 						<p>
 							Find us at:<br />
 							123 Main Street<br />

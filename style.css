@@ -1,4 +1,4 @@
-Montserrat/*
+/*
 Theme Name: Cottage Zen Theme
 Theme URI: http://underscores.me/
 Author: Zach Slagowski
@@ -511,9 +511,10 @@ textarea {
 
 .nav li {
 	text-transform: uppercase;
-	letter-spacing: .1em;
-	font-size: 2em;
-	font-weight: 400;
+	letter-spacing: .2em;
+	font-size: 1.5em;
+	font-weight: 500;
+
 }
 
 .nav>li>a {
@@ -524,6 +525,7 @@ textarea {
 	background-color: #BED63C;
 	border-radius: 5px;
 	transition: .2s;
+	margin-left: 1em;
 }
 
 #menu-item-19 a {
@@ -539,20 +541,21 @@ textarea {
 }
 
 .navbar-toggle {
-	border: 1px solid #000;
+	border: 1px solid #2393b3;
+	transition: .2s;
 }
 
-button:hover, button:active, button:focus {
-	border-color: #000;
+.navbar-toggle:hover, .navbar-toggle:active, .navbar-toggle:focus {
+	border-color: #bed63c;
 }
 
 .icon-bar {
-	background-color: #000;
+	background-color: #2393b3;
 }
 
 .navbar-nav {
 	position: relative;
-	top: -10px;
+	top: -15px;
 }
 
 .navbar-collapse {
@@ -996,7 +999,10 @@ object {
 }
 
 .gemm-header-logo {
-	max-width: 400px;
+	max-width: 300px;
+	position: relative;
+	top: 5px;
+	transition: 2s;
 }
 
 div#bs-example-navbar-collapse-1 {
@@ -1007,24 +1013,89 @@ div#bs-example-navbar-collapse-1 {
 	.menu-primary {
 		top: 15px;
 	}
+
+	.nav li {
+		font-size: 1.2em;
+		letter-spacing: .1em;
+	}
+
+	.gemm-header-logo {
+		position: relative;
+		top: 10px;
+	}
 }
 
-@media(max-width:768px) {
+@media (max-width: 992px) {
+	.nav li {
+		font-size: 1.2em;
+		letter-spacing: .1em;
+	}
+}
+
+@media (max-width:850px) {
+	.gemm-header-logo {
+		width: 220px;
+		position: relative;
+		top: 18px;
+	}
+}
+
+@media(max-width:767px) {
 	.menu-primary {
 	  float: none;
 	}
 
+	.navbar-nav .open .dropdown-menu {
+		text-align: center;
+	}
+
 	.gemm-header-logo {
-		width: 150px;
+		width: 300px;
 		margin-top: 20px;
+		transition: 2s;
+	}
+
+	#menu-item-19 {
+		width: 150px;
+		margin: 1em auto;
 	}
 }
 
 /*--------------------------------------------------------------
 # Front Page
 --------------------------------------------------------------*/
-#gemm-front-header-image {
-	margin-top: -120px;
+.cz-header-logo {
+	position: relative;
+	top: 20%;
+	z-index: 0;
+	width: 90%;
+	margin: 0 auto;
+	z-index: 900;
+}
+
+.cz-header-logo-bg {
+	position: relative;
+	height: 500px;
+	width: 500px;
+	left: 50%;
+	top: 350px;
+	border-radius: 50%;
+	margin-top: -250px;
+	margin-left: -250px;
+}
+
+.cz-header-logo-transparent {
+	background: #fff;
+	position: relative;
+	opacity: .85;
+	height: 500px;
+	width: 500px;
+	left: 50%;
+	top: 100px;
+	border-radius: 50%;
+	margin-top: -250px;
+	margin-left: -250px;
+	z-index: 1;
 }
 
 .gemm-homepage-welcome-msg-bg {
@@ -1033,90 +1104,98 @@ div#bs-example-navbar-collapse-1 {
 	background-position: center;
 	background-attachment: fixed;
 	height: 750px;
+	margin-top: -500px;
 }
 
-.gemm-homepage-welcome-msg {
+.cz-home-content {
+	margin: 4em auto;
+}
+
+.cz-home-content h3 {
+	font-weight: 400;
+	letter-spacing: .1em;
+	margin-bottom: 1em;
+}
+
+.cz-home-content h3 span {
+	color: #AEDFE6;
+}
+
+.cz-home-content p {
+	font-size: 1.7em;
+}
+
+a.cz-learn-more {
 	color: #fff;
-	padding-top: 250px;
-}
-
-.gemm-homepage-welcome-msg {
-	font-size: 3em;
-	text-transform: uppercase;
-	font-weight: 700;
-	letter-spacing: .1em;
-	line-height: 1.2em;
-}
-
-#gemm-front-courses h2 {
+	padding: .5em 1em;
+	background: #BED63C;
+	border-radius: 15px;
+	transition: .2s;
 	text-transform: uppercase;
 	letter-spacing: .1em;
-	border: 3px solid #000;
-	width: 180px;
-	margin: 2em auto;
 }
 
-#gemm-front-posts h2 {
-	text-transform: uppercase;
+.cz-home-see-cz img {
+	width: 100%;
+}
+
+a.cz-learn-more:hover {
+	background: #AEDFE6;
+	text-decoration: none;
+}
+
+a.cz-check-services {
+	font-size: 1.5em;
+	position: relative;
+	bottom: 50px;
+}
+
+.cz-testimonials {
+	width: 50%;
+	margin: 4em auto 5em auto;
+}
+
+.cz-testimonial-text {
+	font-size: 1.5em;
+	font-style: italic;
 	letter-spacing: .1em;
-	border: 3px solid #000;
-	width: 300px;
-	margin: 2em auto;
 }
 
-.gemm-front-posts-title {
-    font-size: 2em;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    font-weight: 700;
+.cz-testimonial-author {
+	color: #BED63C;
+	font-size: 1.5em;
+	font-weight: 300;
 }
 
-.gemm-front-posts-meta {
-    font-size: 1.8em;
-    font-style: italic;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-}
-
-.gemm-front-posts-excerpt {
-    font-size: 1.5em;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    line-height: 25px;
-    margin-top: 1em;
-}
-
-.gemm-front-posts-read-more {
-    font-size: 2em;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    background-color: #000;
-    color: #fff;
-    width: 185px;
-    margin: 2em 80%;
-    padding-right: .3em;
-    padding: .5em 1em;
-    font-weight: 700;
-}
-
-.gemm-front-posts-read-more a {
-	color: #fff;
-}
-
-.gemm-front-posts-read-more a:hover {
-    font-style: italic;
-		text-decoration: none;
-}
 
 @media (max-width: 992px) {
-	.gemm-front-posts-read-more {
-		margin: 2em 70%;
-	}
+
 }
 
 @media (max-width: 768px) {
-	.gemm-front-posts-read-more {
-		margin: 2em 0%;
+	.cz-header-logo-bg {
+		height: 300px;
+		width: 300px;
+		left: 50%;
+		top: 215px;
+		border-radius: 50%;
+		margin-top: -150px;
+		margin-left: -150px;
+	}
+
+	.cz-header-logo-transparent {
+		height: 300px;
+		width: 300px;
+		left: 50%;
+		top: 65px;
+		border-radius: 50%;
+		margin-top: -150px;
+		margin-left: -150px;
+	}
+
+	.gemm-homepage-welcome-msg-bg {
+		height: 450px;
+		margin-top: -300px;
 	}
 }
 
@@ -1187,25 +1266,96 @@ h3#reply-title {
 	margin-bottom: 4em;
 	color: #000;
 }
+
+/*--------------------------------------------------------------
+# Get a Quote Page
+--------------------------------------------------------------*/
+
+.cz-quote-content h2 {
+	text-transform: uppercase;
+	letter-spacing: .2em;
+}
+
+.cz-quote-content h3 {
+	letter-spacing: .1em;
+	font-style: italic;
+	color: #BED63C;
+	font-weight: 400;
+	margin: 2em 0;
+}
+
+.cz-quote-content hr {
+	border: 0;
+	height: 3px;
+	background: #AEDFE6;
+	width: 50%;
+	margin: 3em auto 4em auto;
+}
+
+div#nf-form-2-cont {
+    width: 50%;
+    margin: 0 auto;
+}
+
+div#nf-form-2-cont input, select, textarea {
+    border-radius: 0;
+		border: 1px solid #2393b3;
+		background-color: #eee;
+		padding: 1em;
+		font-size: 1.5em;
+		color: #2393b3;
+}
+
+div#nf-form-2-cont label {
+    text-transform: uppercase;
+		font-size: 1.5em;
+		font-weight: 400;
+		letter-spacing: .2em;
+}
+
+.label-above .nf-field-label {
+    margin-bottom: 0px !important;
+}
+
+input#nf-field-13 {
+    float: right;
+    border-radius: 20px !important;
+    background: #BED63C !important;
+    border: 1px solid #BED63C !important;
+    color: #fff !important;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-size: 1.7em !important;
+}
+
+@media (max-width: 991px) {
+	div#nf-form-2-cont {
+	    width: 75%;
+	    margin: 0 auto;
+	}
+}
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 
 .site-footer {
-    background-color: #F8F8F8;
+    background-color: #eee;
 		padding-top: 2em;
 		padding-bottom: 2em;
 }
 
 .gemm-footer-icons {
-	padding-right: 2em;
+	padding-right: 8em;
 }
 
 .gemm-footer-icons-contact {
-	font-size: 1.5em;
+	font-size: 1.2em;
 	text-transform: uppercase;
-	letter-spacing: .1em;
+	letter-spacing: .2em;
 	margin-top:2em;
+	font-weight: 500;
+	text-align: right;
 }
 
 .gemm-footer-icons .fa {
@@ -1244,19 +1394,26 @@ h3#reply-title {
     padding: .3em .35em;
 }
 
+.gemm-footer-sm-icons {
+    text-align: right;
+}
+
 .gemm-footer-logo {
-    width: 33%;
+    max-width: 400px;
+		margin: 0 auto;
 }
 
 .gemm-copyright {
     text-transform: uppercase;
-    letter-spacing: .1em;
-    font-size: 1.5em;
-		padding-left: 2em;
+    letter-spacing: .2em;
+    font-size: 1.2em;
+		padding-left: 8em;
+		margin: 2em auto;
+		text-align: left;
 }
 
 .gemm-copyright p {
-    margin-top: 2em;
+		font-weight: 500;
 }
 
 .gemm-copyright-quote {
@@ -1279,6 +1436,37 @@ a.gemm-copyright-quote {
 
 .entry-footer {
 	background-color: transparent;
+}
+
+@media (max-width: 992px) {
+
+	.gemm-footer-sm-icons {
+		width: 255px;
+		margin: 2em auto;
+		text-align: center;
+	}
+
+	.gemm-footer-icons-contact {
+		width: 250px;
+		margin: 2em auto;
+		text-align: center;
+	}
+	.gemm-footer-logo {
+		position: relative;
+		left: 5px;
+	}
+
+	.gemm-footer-icons {
+		padding-right: 0;
+	}
+
+  .gemm-copyright{
+		width: 330px;
+		text-align: center;
+		padding-left: 0;
+		position: relative;
+		left: 10px;
+	}
 }
 
 @media (max-width: 768px) {
